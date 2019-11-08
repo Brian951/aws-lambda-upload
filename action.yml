@@ -2,7 +2,6 @@ name: 'uploadAWSLambda'
 description: 'Upload site packages and app.py code to AWS Lambda'
 author: 'Brian951'
 
-
 inputs:
   aws-id:
     description: 'AWS Access Key ID'
@@ -16,7 +15,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-   -${{ inputs.aws-id }}
-   -${{ inputs.aws-key }}
-   -${{ inputs.function-name }}
+  args: ['${{ inputs.aws-id }}','${{ inputs.aws-key }}','${{ inputs.function-name }}']
+   
