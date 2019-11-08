@@ -8,6 +8,7 @@ RUN apt-get update && \
         python3-setuptools \
         groff \
         less \
+		zip\
     && pip3 install --upgrade pip \
     && apt-get clean
 
