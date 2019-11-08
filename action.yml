@@ -17,6 +17,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-	-${{ inputs.aws-id }}
-	-${{ inputs.aws-key }}
-	-${{ inputs.function-name }}
+   -${{ inputs.aws-id }}
+   -${{ inputs.aws-key }}
+   -${{ inputs.function-name }}
