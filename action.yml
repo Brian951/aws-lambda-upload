@@ -14,8 +14,8 @@ inputs:
     description: 'Name of the function to be updated'
     required: true
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
   args:
 	-${{ inputs.aws-id }}
 	-${{ inputs.aws-key }}
