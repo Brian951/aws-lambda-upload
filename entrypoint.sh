@@ -5,7 +5,7 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
   exit 1
 fi
 
-ZIPNAME = "site-packages.zip"
+ZIPNAME="site-packages.zip"
 aws configure set aws_access_key_id $1
 aws configure set aws_secret_access_key $2
 zip -a ZIPNAME $GITHUB_WORKSPACE 
