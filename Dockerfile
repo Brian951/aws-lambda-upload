@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+COPY entrypoint.sh /entrypoint.sh
 RUN apt-get update && \
     apt-get install -y \
         python3 \
