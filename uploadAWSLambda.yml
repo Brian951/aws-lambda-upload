@@ -1,0 +1,22 @@
+name: 'uploadAWSLambda'
+description: 'Upload site packages and app.py code to AWS Lambda'
+author: 'Brian951'
+
+
+inputs:
+  aws-id:
+    description: 'AWS Access Key ID'
+    required: true
+  aws-key:
+    description: 'AWS Secret Access Key'
+    required: true
+  function-name:
+    description: 'Name of the function to be updated'
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+	-${{ inputs.aws-id }}
+	-${{ inputs.aws-key }}
+	-${{ inputs.function-name }}
