@@ -5,6 +5,19 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
   exit 1
 fi
 
+apt-get update && \
+    apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-setuptools \
+    groff \
+    less \
+	zip\
+pip3 install --upgrade pip \
+	apt-get clean
+
+RUN python3 -m pip --no-cache-dir install --upgrade awscli
+
 ZIPNAME="site-packages.zip"
 aws configure set aws_access_key_id $1
 aws configure set aws_secret_access_key $2
