@@ -9,11 +9,15 @@ inputs:
   aws-key:
     description: 'AWS Secret Access Key'
     required: true
+  region-name:
+    description: 'Name of the AWS region'
+    required: true
   function-name:
     description: 'Name of the function to be updated'
     required: true
+  
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: ['${{ inputs.aws-id }}','${{ inputs.aws-key }}','${{ inputs.function-name }}']
+  args: ['${{ inputs.aws-id }}','${{ inputs.aws-key }}','${{ inputs.region-name }}','${{ inputs.function-name }}']
    
