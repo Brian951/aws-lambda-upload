@@ -15,4 +15,4 @@ aws configure set default.region $3
 cd $GITHUB_WORKSPACE 
 zip -r $ZIPNAME .
 UPLOADNAME="fileb://$ZIPNAME"
-./aws.sh lambda update-function-code --function-name $4 --zip-file $UPLOADNAME
+aws lambda update-function-code --function-name $4 --zip-file $UPLOADNAME
