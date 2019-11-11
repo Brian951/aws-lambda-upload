@@ -6,7 +6,7 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
 fi
 
 apt-get update 
-apt-get install -y python3 python3-pip  zip
+apt-get install -y python3 zip
 python3 -m pip --no-cache-dir install --upgrade awscli
 
 ZIPNAME="site-packages.zip"
