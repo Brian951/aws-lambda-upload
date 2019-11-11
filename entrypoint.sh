@@ -6,8 +6,8 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
 fi
 
 apt-get update 
-apt-get install -y python3-pip zip
-pip --no-cache-dir install --upgrade awscli
+apt-get install -y python3 python3-pip zip
+python3 -m pip --no-cache-dir install --upgrade awscli
 
 ZIPNAME="site-packages.zip"
 aws configure set aws_access_key_id $1
