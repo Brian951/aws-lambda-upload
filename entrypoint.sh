@@ -6,9 +6,7 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
 fi
 
 apt-get update 
-apt-get install -y python3 python3-pip python3-setuptools groff less zip
-pip3 install --upgrade pip 
-apt-get clean
+apt-get install -y python3 python3-pip  zip
 python3 -m pip --no-cache-dir install --upgrade awscli
 
 ZIPNAME="site-packages.zip"
