@@ -5,8 +5,6 @@ if [ -z "$GITHUB_WORKSPACE" ]; then
   exit 1
 fi
 
-apt-get zip
-
 ZIPNAME="site-packages.zip"
 
 aws configure set aws_access_key_id $1
