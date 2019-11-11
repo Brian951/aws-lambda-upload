@@ -1,5 +1,3 @@
-FROM mesosphere/aws-cli
-
-COPY entrypoint.sh /entrypoint.sh
+FROM brian951/aws-cli-zip
 
 ENTRYPOINT ["/entrypoint.sh"]
