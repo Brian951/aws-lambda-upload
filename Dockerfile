@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM mesosphere/aws-cli
 
 COPY entrypoint.sh /entrypoint.sh
 
