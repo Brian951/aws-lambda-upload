@@ -7,7 +7,7 @@ fi
 
 apt-get update 
 apt-get install -y zip
-python3 -m pip --no-cache-dir install --upgrade awscli
+pip --no-cache-dir install --upgrade awscli
 
 ZIPNAME="site-packages.zip"
 aws configure set aws_access_key_id $1
